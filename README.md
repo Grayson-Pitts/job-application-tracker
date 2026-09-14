@@ -1,6 +1,6 @@
 # Job Application Tracker
 
-A full-stack web application for tracking internship and job applications. Users can add opportunities, search/filter applications, update statuses, store notes and posting links, and delete entries. Data is persisted in SQLite through a Flask REST API.
+*In-progress* A full-stack web application for tracking internship and job applications. Users can add opportunities, search/filter applications, update statuses, store notes and posting links, and delete entries. Data is persisted in SQLite through a Flask REST API.
 
 ## Tech stack
 - **Frontend:** HTML, CSS, vanilla JavaScript
