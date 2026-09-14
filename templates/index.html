@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application Tracker</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <p class="eyebrow">CAREER DASHBOARD</p>
+        <h1>Job Application Tracker</h1>
+        <p class="subtitle">Track applications, interviews, offers, and follow-ups in one place.</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </header>
+
+    <section class="panel">
+      <h2>Add application</h2>
+      <form id="application-form">
+        <div class="grid">
+          <label>Company<input id="company" required placeholder="OpenAI"></label>
+          <label>Role<input id="role" required placeholder="Software Engineering Intern"></label>
+          <label>Status
+            <select id="status">
+              <option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option><option>Withdrawn</option>
+            </select>
+          </label>
+          <label>Date applied<input id="date_applied" type="date"></label>
+          <label class="wide">Posting link<input id="link" type="url" placeholder="https://..."></label>
+          <label class="wide">Notes<textarea id="notes" rows="2" placeholder="Recruiter contact, follow-up date, interview notes..."></textarea></label>
+        </div>
+        <button type="submit">Add application</button>
+        <span id="message" role="status"></span>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="toolbar">
+        <h2>Applications</h2>
+        <div class="filters">
+          <input id="search" placeholder="Search company or role">
+          <select id="filter-status">
+            <option>All</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option><option>Withdrawn</option>
+          </select>
+        </div>
+      </div>
+      <div id="applications" class="cards"></div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
